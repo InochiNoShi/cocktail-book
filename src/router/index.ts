@@ -13,6 +13,11 @@ const routes: Array<RouteConfig> = [
     path: '/about',
     name: 'About',
     component: () => import('../views/About.vue')
+  },
+  {
+    path: '/alkoholfrei',
+    name: 'Alkoholfrei',
+    component: () => import('../views/PrivateViews/ViewAlkoholfrei.vue')
   }
 ]
 

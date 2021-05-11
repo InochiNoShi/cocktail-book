@@ -42,7 +42,7 @@ export default {
   }),
 
   watch: {
-    group () {
+    group (): void {
       this.drawer = false
     }
   }
