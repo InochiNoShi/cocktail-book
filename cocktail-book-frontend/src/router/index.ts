@@ -13,11 +13,6 @@ const routes: Array<RouteConfig> = [
     path: '/category',
     name: 'Category',
     component: () => import('../views/About.vue')
-  },
-  {
-    path: '/alkoholfrei',
-    name: 'Alkoholfrei',
-    component: () => import('../views/PrivateViews/ViewAlkoholfrei.vue')
   }
 ]
 

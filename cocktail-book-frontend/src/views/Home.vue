@@ -19,7 +19,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 import PrivatePhotoGalery from '@/components/Private/PrivatePhotoGalery.vue'
 
