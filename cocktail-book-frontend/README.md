@@ -1,4 +1,4 @@
-# cocktail-book
+# cocktail-book-frontend
 
 ## Project setup
 ```
