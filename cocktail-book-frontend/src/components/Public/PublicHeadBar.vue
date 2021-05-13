@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar app color="#6A76AB" dense dark shrink-on-scroll src="@/assets/PublicHeadBarImage.jpg" fade-img-on-scroll>
+    <v-app-bar app color="#6A76AB" dense dark src="@/assets/PublicHeadBarImage.jpg">
       <template v-slot:img="{ props }">
         <v-img v-bind="props" gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)" />
       </template>
@@ -15,7 +15,7 @@
       <template v-slot:extension>
         <v-tabs align-with-title>
           <v-tab to="/home">Home</v-tab>
-          <v-tab to="/about">Cocktails</v-tab>
+          <v-tab to="/category">Kategorien</v-tab>
         </v-tabs>
       </template>
     </v-app-bar>

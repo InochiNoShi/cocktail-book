@@ -5,23 +5,10 @@
     hide-delimiter-background
     show-arrows-on-hover
   >
-    <template v-slot:prev="{ on, attrs }">
-      <v-btn
-        color="success"
-        v-bind="attrs"
-        v-on="on"
-      >Previous slide</v-btn>
-    </template>
-    <template v-slot:next="{ on, attrs }">
-      <v-btn
-        color="info"
-        v-bind="attrs"
-        v-on="on"
-      >Next slide</v-btn>
-    </template>
     <v-carousel-item
-      v-for="(slide, i) in slides"
+      v-for="(cocktail, i) in cocktail"
       :key="i"
+      max=1
     >
       <v-sheet
         :color="colors[i]"
@@ -33,7 +20,7 @@
           justify="center"
         >
           <div class="display-3">
-            {{ slide }} Slide
+            {{ cocktail.cocktail_name }}
           </div>
         </v-row>
       </v-sheet>
@@ -42,6 +29,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data () {
     return {
@@ -52,14 +40,14 @@ export default {
         'red lighten-1',
         'deep-purple accent-4'
       ],
-      slides: [
-        'First',
-        'Second',
-        'Third',
-        'Fourth',
-        'Fifth'
-      ]
+      cocktail: []
     }
+  },
+  mounted () {
+    axios
+      .get('http://localhost:8080/cocktail')
+      .then(response => (this.cocktail = response.data))
+      .catch(error => (console.log(error)))
   }
 }
 </script>

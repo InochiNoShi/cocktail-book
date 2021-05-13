@@ -7,11 +7,16 @@
         </v-col>
       </v-row>
       <v-row no-gutters>
-        <v-col cols="24" sm="12">
+        <v-col cols="8" sm="4">
+          <PrivateLeftCard />
+        </v-col>
+        <v-col cols="15" sm="8">
           <v-card>
-            <v-card-title>title</v-card-title>
-            <v-card-subtitle>subtitle</v-card-subtitle>
-            <v-card-text>kleiner text</v-card-text>
+            <v-card-title class="justify-center">
+              Tools
+            </v-card-title>
+            <v-divider />
+            <PrivateCenterCard />
           </v-card>
         </v-col>
       </v-row>
@@ -21,10 +26,12 @@
 
 <script>
 import Vue from 'vue'
+import PrivateLeftCard from '@/components/Private/PrivateLeftCard.vue'
+import PrivateCenterCard from '@/components/Private/PrivateCenterCard.vue'
 import PrivatePhotoGalery from '@/components/Private/PrivatePhotoGalery.vue'
 
 export default Vue.extend({
   name: 'Home',
-  components: { PrivatePhotoGalery }
+  components: { PrivatePhotoGalery, PrivateLeftCard, PrivateCenterCard }
 })
 </script>
